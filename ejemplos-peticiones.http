@@ -1,0 +1,42 @@
+### Variables
+@baseUrl = http://localhost:3000
+# @baseUrl = https://tu-app.onrender.com
+
+### Obtener todos los usuarios
+GET {{baseUrl}}/api/usuarios
+
+### Obtener usuario por ID
+GET {{baseUrl}}/api/usuarios/1
+
+### Crear nuevo usuario
+POST {{baseUrl}}/api/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Ana Martínez",
+  "email": "ana@example.com",
+  "edad": 27
+}
+
+### Actualizar usuario
+PUT {{baseUrl}}/api/usuarios/1
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez Actualizado",
+  "edad": 26
+}
+
+### Actualizar solo el email
+PUT {{baseUrl}}/api/usuarios/2
+Content-Type: application/json
+
+{
+  "email": "maria.nueva@example.com"
+}
+
+### Eliminar usuario
+DELETE {{baseUrl}}/api/usuarios/3
+
+### Ver página principal
+GET {{baseUrl}}/
