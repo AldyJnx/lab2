@@ -11,8 +11,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Ruta de bienvenida
-app.get('/', (req, res) => {
+// Servir archivos estáticos
+app.use(express.static('public'));
+
+// Ruta de información de la API
+app.get('/api', (req, res) => {
   res.json({
     message: 'API CRUD de Usuarios',
     version: '1.0.0',
